@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = sudo docker.build("demowebserver")
+        app = docker.build("demowebserver")
     }
 
     stage('Test image') {
