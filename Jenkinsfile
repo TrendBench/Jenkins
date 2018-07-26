@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("demowebserver")
+        app = docker.build("nferrell/trendbench")
     }
 
     stage('Test image') {
