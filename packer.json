@@ -19,8 +19,6 @@
     "type": "shell",
     "inline": [
       "sleep 30",
-      "wget https://s3.amazonaws.com/trendbench/dockerinstall",
-      "sudo sh dockerinstall",
       "wget https://s3.amazonaws.com/trendbench/linux-agent-install",
       "sudo sh linux-agent-install"
 	
