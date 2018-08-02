@@ -19,7 +19,7 @@
     "type": "shell",
     "inline": [
       "sleep 30",
-      "wget https://s3.amazonaws.com/trendbench/Agent-Ubuntu_16.04-11.0.0-211.x86_64.zip",
+      "sudo wget https://s3.amazonaws.com/trendbench/Agent-Ubuntu_16.04-11.0.0-211.x86_64.zip",
       "sudo unzip Agent-Ubuntu_16.04-11.0.0-211.x86_64.zip",
       "sudo apt install ./Agent-Core-Ubuntu_16.04-11.0.0-211.x86_64.deb"
 	
