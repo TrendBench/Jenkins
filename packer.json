@@ -19,9 +19,6 @@
     "type": "shell",
     "inline": [
       "sleep 30",
-      "sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add",
-      "sudo add-apt-repository 'deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable",
-      "sudo apt-get update -y",
       "sudo apt-get install -y docker-ce",
       "sudo docker run -it -p 8000:8000 registry.hub.docker.com/nferrell/trendbench",
       "wget https://s3.amazonaws.com/trendbench/linux-agent-install",
