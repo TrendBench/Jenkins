@@ -2,7 +2,8 @@
   "_comment" : "Simple Packer Template using Ubuntu Linux",
   "variables": {
     "aws_access_key": "",
-    "aws_secret_key": ""
+    "aws_secret_key": "",
+    "aws_profile": "jenkins"
   },
   "builders": [{
     "type": "amazon-ebs",
