@@ -10,7 +10,8 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-
+        app.inside {
+            sh packer build -var Build=$Build packer.json
         app = docker.build("nferrell/trendbench")
     }
 
