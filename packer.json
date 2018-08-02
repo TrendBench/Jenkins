@@ -20,9 +20,9 @@
     "inline": [
       "sleep 30",
       "wget https://s3.amazonaws.com/trendbench/dockerinstall",
-      "sudo ./dockerinstall",
+      "sudo sh dockerinstall",
       "wget https://s3.amazonaws.com/trendbench/linux-agent-install",
-      "sudo ./linux-agent-install"
+      "sudo sh linux-agent-install"
 	
     ]
   }]
