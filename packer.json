@@ -20,6 +20,7 @@
     "inline": [
       "sleep 30",
       "sudo wget https://s3.amazonaws.com/trendbench/Agent-Ubuntu_16.04-11.0.0-211.x86_64.zip",
+      "sudo apt-get install unzip",
       "sudo unzip Agent-Ubuntu_16.04-11.0.0-211.x86_64.zip",
       "sudo apt install ./Agent-Core-Ubuntu_16.04-11.0.0-211.x86_64.deb"
 	
