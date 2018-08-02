@@ -15,7 +15,7 @@ node {
     }
     stage('Create Packer AMI') {
         
-            sh 'sudo packer build packer.json'
+            sh 'packer build packer.json'
     }
     stage('Test image') {
         /* Ideally, we would run a test framework against our image.
