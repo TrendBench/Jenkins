@@ -29,7 +29,7 @@ node {
     stage('Push image') {
    
         docker.withRegistry("https://264846450397.dkr.ecr.us-east-1.amazonaws.com", "ecr:us-east-1:ecr-credentials") {
-            docker.image("trendbench").push('latest')
+            docker.image("trendbench").push('trendbench:latest')
 }
     }
     stage('Refresh Pod') {
