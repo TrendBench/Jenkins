@@ -15,7 +15,7 @@ node {
     }
     stage('Create Packer AMI') {
         
-            sh 'packer build packer.json'
+            /*sh 'packer build packer.json'*/
     }
     stage('Test image') {
         /* Ideally, we would run a test framework against our image.
@@ -28,7 +28,7 @@ node {
 
     stage('Push image') {
    
-        docker.withRegistry("https://your.ecr.domain.amazonws.com", "ecr:us-east-1:ecr-credentials") {
+        docker.withRegistry("https://264846450397.dkr.ecr.us-east-1.amazonaws.com", "ecr:us-east-1:ecr-credentials") {
             docker.image("web-server").push('latest')
 }
     }
