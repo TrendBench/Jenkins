@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
         
-        app = docker.build("trendbench")
+        app = docker.build("web-server")
     }
     stage('Create Packer AMI') {
         
@@ -29,7 +29,7 @@ node {
     stage('Push image') {
    
         docker.withRegistry("https://264846450397.dkr.ecr.us-east-1.amazonaws.com", "ecr:us-east-1:ecr-credentials") {
-            docker.image("web-server").push('latest')
+            docker.image("trendbench").push('latest')
 }
     }
     stage('Refresh Pod') {
