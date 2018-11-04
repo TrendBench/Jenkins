@@ -27,12 +27,9 @@ node {
     }
 
     stage('Push image') {
-        /* Finally, we'll push the image with two tags:
-         * First, the incremental build number from Jenkins
-         * Second, the 'latest' tag.
-         * Pushing multiple tags is cheap, as all the layers are reused. */
-        docker.withRegistry('https://registry.hub.docker.com/nferrell', 'docker-hub-credentials') {
-            app.push("latest")
+   
+        docker.withRegistry('264846450397.dkr.ecr.us-east-1.amazonaws.com/trendbench', 'ecr:us-east-1:ecr-credentials') {
+            docker.image('web-server').push('latest')
         }
     }
     stage('Refresh Pod') {
