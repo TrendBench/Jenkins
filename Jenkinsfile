@@ -28,9 +28,9 @@ node {
 
     stage('Push image') {
    
-        withDockerRegistry(credentialsId: 'af77b905-1508-49f7-80a1-536451ff9ec8', url: 'https://264846450397.dkr.ecr.us-east-1.amazonaws.com') {
-            docker.image('web-server').push('latest')
-        }
+        docker.withRegistry("https://your.ecr.domain.amazonws.com", "ecr:us-east-1:ecr-credentials") {
+            docker.image("web-server").push('latest')
+}
     }
     stage('Refresh Pod') {
         
