@@ -38,7 +38,7 @@ node {
     stage('Refresh Pod') {
         
             withKubeConfig(caCertificate: '', contextName: '', credentialsId: 'KubeSecret', serverUrl: 'https://172.20.40.96') {
-    // some block
+
                 sh kubectl '--insecure-skip-tls-verify delete pods -l k8s-app=web-server'
 }
     }
