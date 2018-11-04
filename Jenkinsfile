@@ -28,7 +28,7 @@ node {
 
     stage('Push image') {
    
-        withDockerRegistry(credentialsId: 'af77b905-1508-49f7-80a1-536451ff9ec8', url: '264846450397.dkr.ecr.us-east-1.amazonaws.com/trendbench') {
+        withDockerRegistry(credentialsId: 'af77b905-1508-49f7-80a1-536451ff9ec8', url: 'https://264846450397.dkr.ecr.us-east-1.amazonaws.com/trendbench') {
             docker.image('web-server').push('latest')
         }
     }
