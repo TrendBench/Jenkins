@@ -39,7 +39,7 @@ node {
         
             withKubeConfig(caCertificate: '', contextName: '', credentialsId: 'KubeSecret', serverUrl: 'https://172.20.40.96') {
     // some block
-                kubectl delete pods -l 'name=web-server'
+                kubectl --insecure-skip-tls-verify delete pods -l 'name=web-server'
 }
     }
 }
