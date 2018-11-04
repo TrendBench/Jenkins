@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
         
-        app = docker.build("web-server")
+        app = docker.build("trendbench")
     }
     stage('Create Packer AMI') {
         
