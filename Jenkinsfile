@@ -28,7 +28,7 @@ node {
 
     stage('Push image') {
    
-        docker.withRegistry('264846450397.dkr.ecr.us-east-1.amazonaws.com/trendbench', 'ecr-credentials') {
+        docker.withRegistry('264846450397.dkr.ecr.us-east-1.amazonaws.com/trendbench', 'AKIAIHUEILSEWU2QJKLQ') {
             docker.image('web-server').push('latest')
         }
     }
