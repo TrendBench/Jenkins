@@ -15,7 +15,7 @@ node {
     }
     stage('Create Packer AMI') {
         
-            sh 'packer build packer.json'
+           /* sh 'packer build packer.json' */
     }
 
     stage('Push image') {
