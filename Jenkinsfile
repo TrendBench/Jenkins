@@ -17,14 +17,6 @@ node {
         
             /*sh 'packer build packer.json'*/
     }
-    stage('Test image') {
-        /* Ideally, we would run a test framework against our image.
-         * For this example, we're using a Volkswagen-type approach ;-) */
-
-        app.inside {
-            sh 'echo "Tests passed"'
-        }
-    }
 
     stage('Push image') {
    
@@ -32,6 +24,12 @@ node {
             docker.image("trendbench").push('latest')
 }
     }
+    stage('Test image') {
+
+        app.inside {
+            sh 'echo "Tests passed"'
+        }
+    }  
     stage('Refresh Pod') {
         
             withKubeConfig(caCertificate: '', contextName: '', credentialsId: 'KubeSecret', serverUrl: 'https://172.20.40.96') {
