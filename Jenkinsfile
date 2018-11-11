@@ -27,8 +27,7 @@ node {
     stage('Test image') {
 
         app.inside {
-            sh 'cd'
-            sh 'scan.py'
+            sh '/var/lib/jenkins/sc/scan.py'
         }
     }  
     stage('Refresh Pod') {
