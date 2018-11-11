@@ -20,6 +20,7 @@ node {
 
     stage('Push Docker image') {
    
+        sh 'aws ecr put-image --repository-name trendbench --image-tag old'
         docker.withRegistry("https://264846450397.dkr.ecr.us-east-1.amazonaws.com", "ecr:us-east-1:ecr-credentials") {
             docker.image("trendbench").push('latest')
 }
