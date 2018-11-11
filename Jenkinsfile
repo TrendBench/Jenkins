@@ -13,7 +13,7 @@ node {
         
         app = docker.build("trendbench")
     }
-    stage('Build AMI') {
+    stage('Build AMI (optional)') {
         
            /* sh 'packer build packer.json' */
     }
