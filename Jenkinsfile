@@ -24,7 +24,7 @@ node {
             docker.image("trendbench").push('latest')
 }
     }
-    stage('Test image') {
+    stage('Test Stage') {
 
             sh '/var/lib/jenkins/sc/scan.py'
     }  
