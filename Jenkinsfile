@@ -27,7 +27,7 @@ node {
     stage('Test image') {
 
         app.inside {
-            sh 'sudo /bin/sc/scan.py'
+            sh '/bin/sc/scan.py'
         }
     }  
     stage('Refresh Pod') {
