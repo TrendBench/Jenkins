@@ -28,7 +28,7 @@ node {
 
             sh '/var/lib/jenkins/sc/scan.py'
     }  
-    stage('Refresh Pods') {
+    stage('Refresh Nodes') {
         
             withKubeConfig(caCertificate: '', contextName: '', credentialsId: 'KubeSecret', serverUrl: 'https://172.20.40.96') {
 
