@@ -1,13 +1,13 @@
 node {
     def app
 
-    stage('Clone repository') {
+    stage('Clone Repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
         checkout scm
     }
 
-    stage('Build Docker image') {
+    stage('Build Docker Image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
         
@@ -18,7 +18,7 @@ node {
            /* sh 'packer build packer.json' */
     }
 
-    stage('Push Docker image') {
+    stage('Push Docker Image') {
    
         docker.withRegistry("https://264846450397.dkr.ecr.us-east-1.amazonaws.com", "ecr:us-east-1:ecr-credentials") {
             docker.image("trendbench").push('latest')
