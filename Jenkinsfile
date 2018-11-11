@@ -7,7 +7,7 @@ node {
         checkout scm
     }
 
-    stage('Build image') {
+    stage('Build Docker image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
         
@@ -18,7 +18,7 @@ node {
            /* sh 'packer build packer.json' */
     }
 
-    stage('Push image') {
+    stage('Push Docker image') {
    
         docker.withRegistry("https://264846450397.dkr.ecr.us-east-1.amazonaws.com", "ecr:us-east-1:ecr-credentials") {
             docker.image("trendbench").push('latest')
