@@ -2,14 +2,13 @@ node {
     def app
 
     stage('Clone Repository') {
-        /* Let's make sure we have the repository cloned to our workspace */
+        /* Clone repository to workspace */
 
         checkout scm
     }
 
     stage('Build Docker Image') {
-        /* This builds the actual image; synonymous to
-         * docker build on the command line */
+        /* Build Dockler Image */
         
         app = docker.build("trendbench")
     }
